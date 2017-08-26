@@ -6,8 +6,6 @@ from bs4 import BeautifulSoup
 
 '''
 
-soup = BeautifulSoup(open("D:\\Code\\python\\paths.html"), "html.parser")
-
 class path_store:
     """
     存储路径
@@ -87,7 +85,3 @@ def xpath(element):
             else:
                 store.push(elen.name)
     return store.all_path()
-
-        
-text = soup.find(attrs={"placeholder": u"\u8bf7\u8f93\u5165\u5bc6\u7801"})
-print xpath(text)
