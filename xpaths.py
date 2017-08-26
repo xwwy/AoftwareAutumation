@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 
 '''
 
-class path_store:
+class path_store(object):
     """
     存储路径
     """
