@@ -8,6 +8,7 @@
 """
 import os
 import sys
+import stat
 
 class store_all(object):
     """
@@ -259,6 +260,7 @@ if __name__ == "__main__":
     except IndexError:
         names = []
     with open((dirs + os.path.sep + 'access.log'), 'w') as log:
+        os.chmod(dirs + os.path.sep + 'access.log', stat.S_IRUSR + stat.S_IWUSR + stat.S_IRGRP)
         find_all(dirs)
         check_x(log)
         check_nx(log)
